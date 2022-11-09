@@ -1,0 +1,22 @@
+from collections import namedtuple
+
+
+def find_item(Person):
+    return True
+
+
+
+Person = list()
+
+Person = namedtuple("Person", "first last zip")
+
+p1 = Person("Joe", "Schmoe", "93002")
+p2 = Person("Moe", "Sloe", "22587")
+
+print(p1.first)
+print(p2.last)
+
+
+
+
+print(find_item(Person))

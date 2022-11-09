@@ -1,0 +1,18 @@
+from collections import namedtuple
+
+
+def find_person(Person):
+    for chris in Person:
+        return True, Person[0]
+    else: 
+        return False
+
+
+Person = namedtuple("Person", ["Name", "Age", "Weight"])
+
+boris = Person("Boris", "29", "80")
+chris = Person("Christopher", "30", "75")
+sasha = Person("Alexandar", "35", "68")
+
+
+print(find_person(chris))

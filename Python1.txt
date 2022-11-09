@@ -1,0 +1,51 @@
+# Create fuction that searches through list of items, if given key is in list, it returns item and it's index in namedtuple, if not it returns empty tuple.
+
+from collections import namedtuple
+
+
+def find_person(Person):
+    for chris in Person:
+        return True, chris.index(chris)
+    else: 
+        return False
+
+
+Person = namedtuple("Person", ["Name", "Age", "Weight"])
+
+boris = Person("Boris", 29, 80)
+chris = Person("Christopher", 30, 75)
+sasha = Person("Alexandar", 35, 68)
+
+
+print(chris, find_person(chris))
+
+---------------------
+from collections import namedtuple
+
+
+def find_student(Participant):
+    if p1 in Participant:
+        return True
+    else:
+        return False
+
+#create employee NamedTuple  
+
+Participant = namedtuple('Participant', ['Name', 'Age', 'Country'])  
+#Adding two participants  
+
+p1 = Participant('Itika', '21', 'India')  
+p2 = Participant('Arshia', '19', 'Australia')  
+
+#Accessing the items using index  
+
+#print( 'The name and country of the first participant are: ' + p1[0] + ' and ' + p1[2])  
+#Accessing the items using name of the field  
+
+#print( 'The name and country of the second participant are: ' + p2.Name + ' and ' + p2.Country)  
+#Accessing the items using the method: getattr()  
+
+#print( 'The Age of participant 1 and 2 are: ' + getattr(p1, 'Age') + ' and ' + getattr(p2, 'Age'))  
+
+
+print(find_student(p2))
